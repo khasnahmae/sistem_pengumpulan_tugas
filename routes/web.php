@@ -29,7 +29,15 @@ Route::post('/register', [LoginController::class, 'register']);
 Route::get('/registration-success', [LoginController::class, 'registrationSuccess'])->name('registration.success');
 
 
+Route::get('/', function () {
+    return view('welcome');
+});
+
 
 Route::resource('tugas', TugasController::class);
 Route::resource('dosen', DosenController::class);
 Route::resource('mahasiswa', MahasiswaController::class);
+
+Route::get('/tugasmhs', function () {
+    return view('tugas.mahasiswa.mahasiswa');
+});
