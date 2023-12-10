@@ -29,6 +29,7 @@ Route::post('/register', [LoginController::class, 'register']);
 Route::get('/registration-success', [LoginController::class, 'registrationSuccess'])->name('registration.success');
 
 
+
 Route::get('/', function () {
     return view('welcome');
 });
